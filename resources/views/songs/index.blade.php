@@ -3,6 +3,7 @@
 @section('title', 'Songs list')
 
 @section('content')
+    <a href="{{ route('songs.create') }}" class="btn btn-primary my-4 ">Aggiungi Canzone</a>
     <table class="table table-striped">
         <thead>
             <tr>

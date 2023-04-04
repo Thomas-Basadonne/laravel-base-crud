@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title', 50);
             $table->string('album', 50);
             $table->string('author', 50);
-            $table->string('editor', 50);
+            $table->string('editor', 50)->nullable();
             $table->unsignedSmallInteger('length');
             $table->string('poster')->nullable();
             $table->timestamps();
