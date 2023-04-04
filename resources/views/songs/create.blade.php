@@ -38,7 +38,7 @@
 
         <div class="col-4">
             <label for="length" class="form-label">Length</label>
-            <input type="time" class="form-control" name="length" id="length">
+            <input type="number" class="form-control" name="length" id="length">
         </div>
 
         <div class="col-4">
