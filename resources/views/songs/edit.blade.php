@@ -1,20 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Add new song')
+@section('title', 'Edit song data: "' . $song->title . '"')
 
 @section('content')
-    <form action="{{ route('songs.store') }}" method="POST" class="row gy-5">
+    <form action="{{ route('songs.update', $song) }}" method="POST" class="row gy-5">
         @csrf
-
-        {{-- @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif --}}
+        @method('PUT')
 
         <div class="col-4">
             <label for="title" class="form-label">Titolo</label>
