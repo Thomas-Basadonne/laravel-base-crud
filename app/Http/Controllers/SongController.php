@@ -17,9 +17,9 @@ class SongController extends Controller
     {
         if ($request->has("term")) {
             $term = $request->get("term");
-            $songs = Song::where('name', 'LIKE', "%$term%");
+            $songs = Song::where('title', 'LIKE', "%$term%")->paginate(20);
         } else {
-            $songs = Song::all();
+            $songs = Song::paginate(20);
         }
 
         return view("songs.index", compact('songs'));
